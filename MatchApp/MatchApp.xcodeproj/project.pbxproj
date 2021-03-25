@@ -46,6 +46,9 @@
 		146F2F1B260A74830015047E = {
 			isa = PBXGroup;
 			children = (
+				146F2F47260AAE380015047E /* Model */,
+				146F2F48260AAE420015047E /* View */,
+				146F2F49260AAE470015047E /* Controllers */,
 				146F2F26260A74830015047E /* MatchApp */,
 				146F2F25260A74830015047E /* Products */,
 			);
@@ -64,16 +67,37 @@
 			children = (
 				146F2F27260A74830015047E /* AppDelegate.swift */,
 				146F2F29260A74830015047E /* SceneDelegate.swift */,
-				146F2F2B260A74830015047E /* ViewController.swift */,
-				146F2F3D260A7C240015047E /* CardModel.swift */,
-				146F2F40260A7D680015047E /* Card.swift */,
 				146F2F2D260A74830015047E /* Main.storyboard */,
 				146F2F30260A74840015047E /* Assets.xcassets */,
 				146F2F32260A74840015047E /* LaunchScreen.storyboard */,
 				146F2F35260A74840015047E /* Info.plist */,
-				146F2F44260A81DC0015047E /* CardCollectionViewCell.swift */,
 			);
 			path = MatchApp;
+			sourceTree = "<group>";
+		};
+		146F2F47260AAE380015047E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				146F2F40260A7D680015047E /* Card.swift */,
+				146F2F3D260A7C240015047E /* CardModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		146F2F48260AAE420015047E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				146F2F44260A81DC0015047E /* CardCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		146F2F49260AAE470015047E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				146F2F2B260A74830015047E /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

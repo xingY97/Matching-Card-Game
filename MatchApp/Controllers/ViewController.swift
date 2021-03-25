@@ -27,9 +27,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
     }
 
-
-
-
     // MARK: - collectionView Delegate Methods
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -42,14 +39,26 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         //what should the cell show for a specific cell
         //Get a cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
         
-        //configure it
+        //Get the card from the card array
+        let card = cardsArray[indexPath.row]
+        
+        //configuring the cell
+        cell.configureCell(card: card)
         
         //Return it
         return cell
         
-    
 }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //Get a refrence to the cell that was tapped
+        let cell = collectionView.cellForItem(at: indexPath) as? CardCollectionViewCell
+        
+        //Flip the card up
+        cell?.flipUp()
+        
+    }
 
 }
